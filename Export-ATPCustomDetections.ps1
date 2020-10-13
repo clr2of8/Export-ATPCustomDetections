@@ -167,5 +167,3 @@ function Export-ATPCustomDetections {
 
     Write-Host -fore green "DONE"
 }
-
-Export-ATPCustomDetections
