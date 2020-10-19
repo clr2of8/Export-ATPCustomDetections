@@ -40,7 +40,7 @@ You can find your bearer token by using the developer tools in the browser where
 
 ![Copy Bearer Token](images/bearerToken.png "Copy Bearer Token")
 
-Copy everything starting from `Bearer` through the end of the token (shown in light blue) and paste in a file called `bearerToken.txt` in the same folder as the `Export-ATPCustomDetections.ps1` script.
+Copy everything starting from `Bearer` through the end of the token (underlined in yellow) and paste in a file called `bearerToken.txt` in the same folder as the `Export-ATPCustomDetections.ps1` script.
 
 ## Usage Examples
 
