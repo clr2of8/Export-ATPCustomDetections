@@ -15,6 +15,10 @@ function Export-ATPCustomDetections {
     $queriesUrl = "https://ineportalapi-$Region-prd.securitycenter.windows.com/hunting/queries/"
     $rulesUrl = "https://ineportalapi-$Region-prd.securitycenter.windows.com/hunting/rules/byquery/"
 
+
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls11 -bor [System.Net.SecurityProtocolType]::Tls
+    (New-Object System.Net.WebClient).Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+    
     $urls = [ordered]@{
         "scheduled" = "https://ineportalapi-$Region-prd.securitycenter.windows.com/hunting/queries/scheduled"
         "shared"    = "https://ineportalapi-$Region-prd.securitycenter.windows.com/hunting/queries/shared"
